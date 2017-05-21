@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage{CJK}
+\usepackage{indentfirst}
+\usepackage{anysize}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{url}
+\usepackage{float}
+
+%标题缩进
+%\usepackage[bf, small]{titlesec}
+%    \titleformat{\section}{\bf\large}{\thesection.\,}{0.24em}{}
+%    \titlespacing{\section}{0cm}{*1.5}{*1.1}
+%    \titleformat{\subsection}{\bf}{\thesubsection.\enspace}{0.5em}{}
+%    \titlespacing{\subsection}{15pt}{*1.5}{*1.1}
+%    \titleformat{\subsubsection}{}{\thesubsubsection.\,}{0.24em}{}
+%    \titlespacing{\subsubsection}{30pt}{*1.5}{*1.1}
+
+\linespread{1.5}
+
+
+\marginsize{3.5cm}{3.5cm}{2cm}{2cm}
+\setlength{\parindent}{2em}
+
+\newcolumntype{L}[1]{>{\vspace{0.5em}\begin{minipage}{#1}\raggedright\let\newline\\
+\arraybackslash\hspace{0pt}}m{#1}<{\end{minipage}\vspace{0.5em}}}
+\newcolumntype{R}[1]{>{\vspace{0.5em}\begin{minipage}{#1}\raggedleft\let\newline\\
+\arraybackslash\hspace{0pt}}m{#1}<{\end{minipage}\vspace{0.5em}}}
+\newcolumntype{C}[1]{>{\vspace{0.5em}\begin{minipage}{#1}\centering\let\newline\\
+\arraybackslash\hspace{0pt}}m{#1}<{\end{minipage}\vspace{0.5em}}}
+
+
+%使得图片显示对应章节
+\renewcommand\thefigure{\thesection.\arabic{figure}}
+\makeatletter
+\@addtoreset{figure}{section}
+\makeatother
+
+\begin{document} 
+\begin{CJK}{UTF8}{gbsn}
+
+\newcommand*{\titleGP}{\begingroup % Create the command for including the title page in the document
+\centering % Center all text
+\vspace*{\baselineskip} % White space at the top of the page
+
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal line
+\rule{\textwidth}{0.4pt}\\[\baselineskip] % Thin horizontal line
+
+{\LARGE 请求调页存储管理方式模拟 \\ \vspace{2em} \begin{large} 操作系统课程设计 \end{large}}\\[0.2\baselineskip] % Title
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal line
+\rule{\textwidth}{1.6pt}\\[\baselineskip] % Thick horizontal line
+
+\scshape % Small caps
+%利用操作系统中的多线程思想，自我实现电梯调度算法 \\[\baselineskip] % Tagline(s) or further description
+operating system,  Spring 2017\par % Location and year
+
+\vspace*{2\baselineskip} % Whitespace between location/year and editors
+
+ By \\[\baselineskip]
+{\Large1552674 李源 \par} % Editor list
+
+
+\vfill % Whitespace between editor names and publisher logo
+
+{\itshape Tongji University \\ School of Software Engineering \par}
+
+\endgroup}
+
+
+\titleGP % This command includes the title page
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{项目背景}
+\subsection{项目需求}
+假设每个页面可存放10条指令，分配给一个作业的内存块为4。模拟一个作业的执行过程，该作业有320条指令，即它的地址空间为32页，目前所有页还没有调入内存。
+
+\subsection{项目目的}
+\begin{itemize}
+	\setlength{\itemsep}{0.5pt}
+	\item 掌握页面、页表、地址转换过程；
+	\item 对页面置换过程有更深的认识；
+	\item 加深对请求调页系统的原理和实现过程的理解。
+\end{itemize}
+
+\vspace{3em}
+
+\section{需求分析}
+根据项目需求，我们可以得知本项目所模拟的内存和作业分别满足如下要求。结合内存和作业的实际情况，我们可以设计出本项目的模拟过程。
+
+\begin{itemize}
+	\setlength{\itemsep}{0.5pt}
+	\item 内存：4个内存块，一个内存块中能存放10条指令；
+	\item 作业：320条指令，分别放在32页中。
+\end{itemize}
+
+
+
+\subsection{模拟过程}
+在模拟过程中，对于每一条待访问的指令，存在下属两种可能：
+\begin{itemize}
+	\setlength{\itemsep}{0.5pt}
+	\item 该指令在内存中，则显示其物理地址，并转到下一条指令；
+	\item 该指令不在内存中，则发生缺页，此时需要记录缺页次数，并将其调入内存。
+\end{itemize}
+
+\vspace{3em}
+
+\section{调度算法}
+
+\vspace{3em}
+\section{系统实现}
+
+
+\vspace{3em}
+\section{开发环境}
+\begin{itemize}
+	\item 系统：macOS Sierra (version 10.12.4)
+	\item IDE：Qt Creator 4.2.1, Based on Qt 5.8.0 (Clang 7.0 (Apple), 64 bit)
+	\item 语言： C++
+\end{itemize}
+
+\vspace{3em}
+\section{提交内容}
+\begin{itemize}
+	\item 源代码
+	\item assignment2.zip 可执行文件压缩包（需在mac系统下使用）
+	\item assignment2.dmg 安装包（需在mac系统下使用）
+	\item 说明文档
+	\item 演示视频
+\end{itemize}
+
+\end{CJK}
+\end{document}
