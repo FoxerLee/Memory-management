@@ -4,7 +4,12 @@
 \contentsline {section}{\numberline {2}需求分析}{3}
 \contentsline {subsection}{\numberline {2.1}模拟方案}{3}
 \contentsline {section}{\numberline {3}调度算法}{4}
-\contentsline {subsection}{\numberline {3.1}置换算法}{4}
-\contentsline {section}{\numberline {4}系统实现}{4}
-\contentsline {section}{\numberline {5}开发环境}{4}
-\contentsline {section}{\numberline {6}提交内容}{4}
+\contentsline {subsection}{\numberline {3.1}FIFO算法}{4}
+\contentsline {subsection}{\numberline {3.2}LRU算法}{4}
+\contentsline {subsection}{\numberline {3.3}指令随机选择算法}{5}
+\contentsline {section}{\numberline {4}系统实现}{6}
+\contentsline {subsection}{\numberline {4.1}控制界面}{6}
+\contentsline {subsection}{\numberline {4.2}显示界面}{7}
+\contentsline {subsection}{\numberline {4.3}LRU算法与FIFO算法区别}{8}
+\contentsline {section}{\numberline {5}开发环境}{8}
+\contentsline {section}{\numberline {6}提交内容}{8}

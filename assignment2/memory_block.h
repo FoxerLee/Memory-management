@@ -23,6 +23,8 @@ public:
             blockStore[i] = -1;
         }
         memoryBlocks = new QButtonGroup();
+        one_step = new QButtonGroup();
+        all_steps = new QButtonGroup();
         seqSteps = 0;
         lossNum = 0;
 
@@ -32,7 +34,7 @@ public:
     }
 
 
-
+    void FIFO();
     void LRU();
 
 private:
@@ -63,11 +65,14 @@ private:
     //每一个block存储的页
     int blockStore[4];
 
+    QButtonGroup *all_steps;
+    QButtonGroup *one_step;
+
 signals:
 
 public slots:
-    void oneStep();
-    void allSteps();
+    void oneStep(int i);
+    void allSteps(int i);
 
     void remake();
 

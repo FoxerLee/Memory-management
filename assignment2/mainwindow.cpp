@@ -23,8 +23,11 @@ MainWindow::MainWindow(QWidget *parent) :
     mem->nextAchieve = mem->nowAchieve;
     ui->now_address->setNum(mem->nowAchieve);
     //初始化按钮
-    QObject::connect(ui->one_step, SIGNAL(clicked(bool)), mem, SLOT(oneStep()));
-    QObject::connect(ui->all_steps, SIGNAL(clicked(bool)), mem, SLOT(allSteps()));
+//    QObject::connect(ui->one_step, SIGNAL(clicked(bool)), mem, SLOT(oneStep()));
+//    QObject::connect(ui->all_steps, SIGNAL(clicked(bool)), mem, SLOT(allSteps()));
+    QObject::connect(mem->all_steps, SIGNAL(buttonClicked(int)), mem, SLOT(allSteps(int)));
+    QObject::connect(mem->one_step, SIGNAL(buttonClicked(int)), mem, SLOT(oneStep(int)));
+
     QObject::connect(ui->remake, SIGNAL(clicked(bool)), mem, SLOT(remake()));
 
     QObject::connect(mem->memoryBlocks, SIGNAL(buttonClicked(int)), mem, SLOT(keep(int)));
@@ -42,6 +45,18 @@ void MainWindow::initButton() {
     mem->memoryBlocks->addButton(ui->block_4, 3);
 
     mem->memoryBlocks->setExclusive(false);
+
+    mem->all_steps->addButton(ui->all_steps, 0);
+    mem->all_steps->addButton(ui->all_steps_2, 1);
+
+    mem->one_step->addButton(ui->one_step, 0);
+    mem->one_step->addButton(ui->one_step_2, 1);
+
+    mem->all_steps->setExclusive(false);
+    mem->one_step->setExclusive(false);
+
+    ui->close_2->setEnabled(false);
+    ui->remake_2->setEnabled(false);
 
 }
 

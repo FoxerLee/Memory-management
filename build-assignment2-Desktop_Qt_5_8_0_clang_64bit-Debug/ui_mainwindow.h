@@ -20,6 +20,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -31,33 +32,40 @@ class Ui_MainWindow
 public:
     QWidget *centralWidget;
     QGridLayout *gridLayout;
-    QVBoxLayout *verticalLayout;
-    QLabel *label;
-    QPushButton *block_1;
-    QPushButton *block_2;
-    QPushButton *block_3;
-    QPushButton *block_4;
     QVBoxLayout *verticalLayout_6;
     QLabel *label_6;
     QPushButton *one_step;
     QPushButton *all_steps;
     QPushButton *remake;
     QPushButton *close;
-    QVBoxLayout *verticalLayout_2;
-    QLabel *label_2;
-    QLabel *now_address;
+    QVBoxLayout *verticalLayout_8;
+    QLabel *label_8;
+    QPushButton *one_step_2;
+    QPushButton *all_steps_2;
+    QPushButton *remake_2;
+    QPushButton *close_2;
+    QVBoxLayout *verticalLayout;
+    QLabel *label;
+    QPushButton *block_1;
+    QPushButton *block_2;
+    QPushButton *block_3;
+    QPushButton *block_4;
+    QVBoxLayout *verticalLayout_5;
+    QLabel *label_5;
+    QLabel *loss_rate;
+    QVBoxLayout *verticalLayout_4;
+    QLabel *label_4;
+    QLabel *loss_number;
     QVBoxLayout *verticalLayout_7;
     QLabel *label_7;
     QLabel *is_loss;
     QVBoxLayout *verticalLayout_3;
     QLabel *label_3;
     QLabel *next_address;
-    QVBoxLayout *verticalLayout_4;
-    QLabel *label_4;
-    QLabel *loss_number;
-    QVBoxLayout *verticalLayout_5;
-    QLabel *label_5;
-    QLabel *loss_rate;
+    QVBoxLayout *verticalLayout_2;
+    QLabel *label_2;
+    QLabel *now_address;
+    QTextBrowser *textBrowser;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -66,20 +74,94 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(549, 324);
+        MainWindow->resize(631, 396);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        verticalLayout_6 = new QVBoxLayout();
+        verticalLayout_6->setSpacing(6);
+        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
+        label_6 = new QLabel(centralWidget);
+        label_6->setObjectName(QStringLiteral("label_6"));
+        QFont font;
+        font.setPointSize(16);
+        label_6->setFont(font);
+        label_6->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_6->addWidget(label_6);
+
+        one_step = new QPushButton(centralWidget);
+        one_step->setObjectName(QStringLiteral("one_step"));
+        one_step->setCheckable(false);
+
+        verticalLayout_6->addWidget(one_step);
+
+        all_steps = new QPushButton(centralWidget);
+        all_steps->setObjectName(QStringLiteral("all_steps"));
+        all_steps->setCheckable(false);
+
+        verticalLayout_6->addWidget(all_steps);
+
+        remake = new QPushButton(centralWidget);
+        remake->setObjectName(QStringLiteral("remake"));
+        remake->setCheckable(false);
+
+        verticalLayout_6->addWidget(remake);
+
+        close = new QPushButton(centralWidget);
+        close->setObjectName(QStringLiteral("close"));
+        close->setCheckable(false);
+
+        verticalLayout_6->addWidget(close);
+
+
+        gridLayout->addLayout(verticalLayout_6, 0, 3, 1, 1);
+
+        verticalLayout_8 = new QVBoxLayout();
+        verticalLayout_8->setSpacing(6);
+        verticalLayout_8->setObjectName(QStringLiteral("verticalLayout_8"));
+        label_8 = new QLabel(centralWidget);
+        label_8->setObjectName(QStringLiteral("label_8"));
+        label_8->setFont(font);
+        label_8->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_8->addWidget(label_8);
+
+        one_step_2 = new QPushButton(centralWidget);
+        one_step_2->setObjectName(QStringLiteral("one_step_2"));
+        one_step_2->setCheckable(false);
+
+        verticalLayout_8->addWidget(one_step_2);
+
+        all_steps_2 = new QPushButton(centralWidget);
+        all_steps_2->setObjectName(QStringLiteral("all_steps_2"));
+        all_steps_2->setCheckable(false);
+
+        verticalLayout_8->addWidget(all_steps_2);
+
+        remake_2 = new QPushButton(centralWidget);
+        remake_2->setObjectName(QStringLiteral("remake_2"));
+        remake_2->setCheckable(false);
+
+        verticalLayout_8->addWidget(remake_2);
+
+        close_2 = new QPushButton(centralWidget);
+        close_2->setObjectName(QStringLiteral("close_2"));
+        close_2->setCheckable(false);
+
+        verticalLayout_8->addWidget(close_2);
+
+
+        gridLayout->addLayout(verticalLayout_8, 0, 2, 1, 1);
+
         verticalLayout = new QVBoxLayout();
         verticalLayout->setSpacing(6);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
-        QFont font;
-        font.setPointSize(16);
         label->setFont(font);
         label->setAlignment(Qt::AlignCenter);
 
@@ -112,100 +194,27 @@ public:
 
         gridLayout->addLayout(verticalLayout, 0, 0, 1, 2);
 
-        verticalLayout_6 = new QVBoxLayout();
-        verticalLayout_6->setSpacing(6);
-        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
-        label_6 = new QLabel(centralWidget);
-        label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setFont(font);
-        label_6->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_6->addWidget(label_6);
-
-        one_step = new QPushButton(centralWidget);
-        one_step->setObjectName(QStringLiteral("one_step"));
-
-        verticalLayout_6->addWidget(one_step);
-
-        all_steps = new QPushButton(centralWidget);
-        all_steps->setObjectName(QStringLiteral("all_steps"));
-
-        verticalLayout_6->addWidget(all_steps);
-
-        remake = new QPushButton(centralWidget);
-        remake->setObjectName(QStringLiteral("remake"));
-
-        verticalLayout_6->addWidget(remake);
-
-        close = new QPushButton(centralWidget);
-        close->setObjectName(QStringLiteral("close"));
-
-        verticalLayout_6->addWidget(close);
-
-
-        gridLayout->addLayout(verticalLayout_6, 0, 2, 1, 1);
-
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setSpacing(6);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
+        verticalLayout_5 = new QVBoxLayout();
+        verticalLayout_5->setSpacing(6);
+        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
+        label_5 = new QLabel(centralWidget);
+        label_5->setObjectName(QStringLiteral("label_5"));
         QFont font1;
         font1.setPointSize(15);
-        label_2->setFont(font1);
-        label_2->setAlignment(Qt::AlignCenter);
+        label_5->setFont(font1);
+        label_5->setAlignment(Qt::AlignCenter);
 
-        verticalLayout_2->addWidget(label_2);
+        verticalLayout_5->addWidget(label_5);
 
-        now_address = new QLabel(centralWidget);
-        now_address->setObjectName(QStringLiteral("now_address"));
-        now_address->setFont(font1);
-        now_address->setAlignment(Qt::AlignCenter);
+        loss_rate = new QLabel(centralWidget);
+        loss_rate->setObjectName(QStringLiteral("loss_rate"));
+        loss_rate->setFont(font1);
+        loss_rate->setAlignment(Qt::AlignCenter);
 
-        verticalLayout_2->addWidget(now_address);
-
-
-        gridLayout->addLayout(verticalLayout_2, 1, 0, 1, 1);
-
-        verticalLayout_7 = new QVBoxLayout();
-        verticalLayout_7->setSpacing(6);
-        verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
-        label_7 = new QLabel(centralWidget);
-        label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setFont(font1);
-        label_7->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_7->addWidget(label_7);
-
-        is_loss = new QLabel(centralWidget);
-        is_loss->setObjectName(QStringLiteral("is_loss"));
-        is_loss->setFont(font1);
-        is_loss->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_7->addWidget(is_loss);
+        verticalLayout_5->addWidget(loss_rate);
 
 
-        gridLayout->addLayout(verticalLayout_7, 1, 1, 1, 1);
-
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setSpacing(6);
-        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        label_3 = new QLabel(centralWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setFont(font1);
-        label_3->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_3->addWidget(label_3);
-
-        next_address = new QLabel(centralWidget);
-        next_address->setObjectName(QStringLiteral("next_address"));
-        next_address->setFont(font1);
-        next_address->setAlignment(Qt::AlignCenter);
-
-        verticalLayout_3->addWidget(next_address);
-
-
-        gridLayout->addLayout(verticalLayout_3, 1, 2, 1, 1);
+        gridLayout->addLayout(verticalLayout_5, 1, 4, 1, 1);
 
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setSpacing(6);
@@ -227,30 +236,75 @@ public:
 
         gridLayout->addLayout(verticalLayout_4, 1, 3, 1, 1);
 
-        verticalLayout_5 = new QVBoxLayout();
-        verticalLayout_5->setSpacing(6);
-        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
-        label_5 = new QLabel(centralWidget);
-        label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setFont(font1);
-        label_5->setAlignment(Qt::AlignCenter);
+        verticalLayout_7 = new QVBoxLayout();
+        verticalLayout_7->setSpacing(6);
+        verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
+        label_7 = new QLabel(centralWidget);
+        label_7->setObjectName(QStringLiteral("label_7"));
+        label_7->setFont(font1);
+        label_7->setAlignment(Qt::AlignCenter);
 
-        verticalLayout_5->addWidget(label_5);
+        verticalLayout_7->addWidget(label_7);
 
-        loss_rate = new QLabel(centralWidget);
-        loss_rate->setObjectName(QStringLiteral("loss_rate"));
-        loss_rate->setFont(font1);
-        loss_rate->setAlignment(Qt::AlignCenter);
+        is_loss = new QLabel(centralWidget);
+        is_loss->setObjectName(QStringLiteral("is_loss"));
+        is_loss->setFont(font1);
+        is_loss->setAlignment(Qt::AlignCenter);
 
-        verticalLayout_5->addWidget(loss_rate);
+        verticalLayout_7->addWidget(is_loss);
 
 
-        gridLayout->addLayout(verticalLayout_5, 1, 4, 1, 1);
+        gridLayout->addLayout(verticalLayout_7, 1, 2, 1, 1);
+
+        verticalLayout_3 = new QVBoxLayout();
+        verticalLayout_3->setSpacing(6);
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
+        label_3 = new QLabel(centralWidget);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setFont(font1);
+        label_3->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_3->addWidget(label_3);
+
+        next_address = new QLabel(centralWidget);
+        next_address->setObjectName(QStringLiteral("next_address"));
+        next_address->setFont(font1);
+        next_address->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_3->addWidget(next_address);
+
+
+        gridLayout->addLayout(verticalLayout_3, 1, 1, 1, 1);
+
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        label_2 = new QLabel(centralWidget);
+        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setFont(font1);
+        label_2->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_2->addWidget(label_2);
+
+        now_address = new QLabel(centralWidget);
+        now_address->setObjectName(QStringLiteral("now_address"));
+        now_address->setFont(font1);
+        now_address->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_2->addWidget(now_address);
+
+
+        gridLayout->addLayout(verticalLayout_2, 1, 0, 1, 1);
+
+        textBrowser = new QTextBrowser(centralWidget);
+        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+
+        gridLayout->addWidget(textBrowser, 2, 1, 1, 3);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 549, 22));
+        menuBar->setGeometry(QRect(0, 0, 631, 22));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -267,26 +321,31 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
+        label_6->setText(QApplication::translate("MainWindow", "\346\216\247\345\210\266\347\225\214\351\235\242", Q_NULLPTR));
+        one_step->setText(QApplication::translate("MainWindow", "LRU(\345\215\225\346\255\245)", Q_NULLPTR));
+        all_steps->setText(QApplication::translate("MainWindow", "LRU(\345\205\250\351\203\250)", Q_NULLPTR));
+        remake->setText(QApplication::translate("MainWindow", "\351\207\215\345\210\266", Q_NULLPTR));
+        close->setText(QApplication::translate("MainWindow", "\345\205\263\351\227\255", Q_NULLPTR));
+        label_8->setText(QApplication::translate("MainWindow", "\346\216\247\345\210\266\347\225\214\351\235\242", Q_NULLPTR));
+        one_step_2->setText(QApplication::translate("MainWindow", "FIFO(\345\215\225\346\255\245)", Q_NULLPTR));
+        all_steps_2->setText(QApplication::translate("MainWindow", "FIFO(\345\205\250\351\203\250)", Q_NULLPTR));
+        remake_2->setText(QString());
+        close_2->setText(QString());
         label->setText(QApplication::translate("MainWindow", "\345\206\205\345\255\230\345\235\227", Q_NULLPTR));
         block_1->setText(QString());
         block_2->setText(QString());
         block_3->setText(QString());
         block_4->setText(QString());
-        label_6->setText(QApplication::translate("MainWindow", "\346\216\247\345\210\266\347\225\214\351\235\242", Q_NULLPTR));
-        one_step->setText(QApplication::translate("MainWindow", "\345\215\225\346\255\245\346\211\247\350\241\214", Q_NULLPTR));
-        all_steps->setText(QApplication::translate("MainWindow", "\345\205\250\351\203\250\346\211\247\350\241\214", Q_NULLPTR));
-        remake->setText(QApplication::translate("MainWindow", "\351\207\215\345\210\266", Q_NULLPTR));
-        close->setText(QApplication::translate("MainWindow", "\345\205\263\351\227\255", Q_NULLPTR));
-        label_2->setText(QApplication::translate("MainWindow", "\345\275\223\345\211\215\346\214\207\344\273\244\347\211\251\347\220\206\345\234\260\345\235\200", Q_NULLPTR));
-        now_address->setText(QApplication::translate("MainWindow", "?", Q_NULLPTR));
+        label_5->setText(QApplication::translate("MainWindow", "\347\274\272\351\241\265\347\216\207", Q_NULLPTR));
+        loss_rate->setText(QApplication::translate("MainWindow", "?", Q_NULLPTR));
+        label_4->setText(QApplication::translate("MainWindow", "\347\274\272\351\241\265\346\225\260", Q_NULLPTR));
+        loss_number->setText(QApplication::translate("MainWindow", "?", Q_NULLPTR));
         label_7->setText(QApplication::translate("MainWindow", "\346\230\257\345\220\246\347\274\272\351\241\265", Q_NULLPTR));
         is_loss->setText(QApplication::translate("MainWindow", "?", Q_NULLPTR));
         label_3->setText(QApplication::translate("MainWindow", "\344\270\213\346\235\241\346\214\207\344\273\244\347\211\251\347\220\206\345\234\260\345\235\200", Q_NULLPTR));
         next_address->setText(QApplication::translate("MainWindow", "?", Q_NULLPTR));
-        label_4->setText(QApplication::translate("MainWindow", "\347\274\272\351\241\265\346\225\260", Q_NULLPTR));
-        loss_number->setText(QApplication::translate("MainWindow", "?", Q_NULLPTR));
-        label_5->setText(QApplication::translate("MainWindow", "\347\274\272\351\241\265\347\216\207", Q_NULLPTR));
-        loss_rate->setText(QApplication::translate("MainWindow", "?", Q_NULLPTR));
+        label_2->setText(QApplication::translate("MainWindow", "\345\275\223\345\211\215\346\214\207\344\273\244\347\211\251\347\220\206\345\234\260\345\235\200", Q_NULLPTR));
+        now_address->setText(QApplication::translate("MainWindow", "?", Q_NULLPTR));
     } // retranslateUi
 
 };

@@ -34,14 +34,14 @@ static const qt_meta_stringdata_memory_block_t qt_meta_stringdata_memory_block =
 QT_MOC_LITERAL(0, 0, 12), // "memory_block"
 QT_MOC_LITERAL(1, 13, 7), // "oneStep"
 QT_MOC_LITERAL(2, 21, 0), // ""
-QT_MOC_LITERAL(3, 22, 8), // "allSteps"
-QT_MOC_LITERAL(4, 31, 6), // "remake"
-QT_MOC_LITERAL(5, 38, 4), // "keep"
-QT_MOC_LITERAL(6, 43, 1) // "i"
+QT_MOC_LITERAL(3, 22, 1), // "i"
+QT_MOC_LITERAL(4, 24, 8), // "allSteps"
+QT_MOC_LITERAL(5, 33, 6), // "remake"
+QT_MOC_LITERAL(6, 40, 4) // "keep"
 
     },
-    "memory_block\0oneStep\0\0allSteps\0remake\0"
-    "keep\0i"
+    "memory_block\0oneStep\0\0i\0allSteps\0"
+    "remake\0keep"
 };
 #undef QT_MOC_LITERAL
 
@@ -59,16 +59,16 @@ static const uint qt_meta_data_memory_block[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   34,    2, 0x0a /* Public */,
-       3,    0,   35,    2, 0x0a /* Public */,
-       4,    0,   36,    2, 0x0a /* Public */,
-       5,    1,   37,    2, 0x0a /* Public */,
+       1,    1,   34,    2, 0x0a /* Public */,
+       4,    1,   37,    2, 0x0a /* Public */,
+       5,    0,   40,    2, 0x0a /* Public */,
+       6,    1,   41,    2, 0x0a /* Public */,
 
  // slots: parameters
+    QMetaType::Void, QMetaType::Int,    3,
+    QMetaType::Void, QMetaType::Int,    3,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    6,
+    QMetaType::Void, QMetaType::Int,    3,
 
        0        // eod
 };
@@ -79,8 +79,8 @@ void memory_block::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         memory_block *_t = static_cast<memory_block *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->oneStep(); break;
-        case 1: _t->allSteps(); break;
+        case 0: _t->oneStep((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 1: _t->allSteps((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 2: _t->remake(); break;
         case 3: _t->keep((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
