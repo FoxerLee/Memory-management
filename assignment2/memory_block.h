@@ -71,6 +71,10 @@ public slots:
 
     void remake();
 
+    void keep(int i);
+
+
+
 
 friend class MainWindow;
 };

@@ -143,3 +143,12 @@ void memory_block::remake() {
     uiCopy->is_loss->setText("?");
 
 }
+
+void memory_block::keep(int i) {
+    if (this->memoryBlocks->button(i)->isChecked() == true) {
+        this->memoryBlocks->button(i)->setChecked(false);
+    }
+    else {
+        this->memoryBlocks->button(i)->setChecked(true);
+    }
+}

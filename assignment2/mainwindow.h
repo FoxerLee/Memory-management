@@ -16,6 +16,7 @@ public:
     ~MainWindow();
 
     void initButton();
+    QPushButton *closeApp;
 
     memory_block *mem;
 

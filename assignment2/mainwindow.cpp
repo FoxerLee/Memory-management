@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //初始化部分
 
+    this->closeApp = ui->close;
+
     //初始化block显示
     this->initButton();
     //初始化随机数函数
@@ -24,6 +26,9 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect(ui->one_step, SIGNAL(clicked(bool)), mem, SLOT(oneStep()));
     QObject::connect(ui->all_steps, SIGNAL(clicked(bool)), mem, SLOT(allSteps()));
     QObject::connect(ui->remake, SIGNAL(clicked(bool)), mem, SLOT(remake()));
+
+    QObject::connect(mem->memoryBlocks, SIGNAL(buttonClicked(int)), mem, SLOT(keep(int)));
+
 }
 
 MainWindow::~MainWindow() {
@@ -37,6 +42,7 @@ void MainWindow::initButton() {
     mem->memoryBlocks->addButton(ui->block_4, 3);
 
     mem->memoryBlocks->setExclusive(false);
+
 }
 
 
