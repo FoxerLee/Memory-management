@@ -1,9 +1,9 @@
 #images
-.png
-.jpg
+*.png
+*.jpg
 
 #texpad
-.tex
-.texpadtmp
+*.tex
+*.texpadtmp
 
 
