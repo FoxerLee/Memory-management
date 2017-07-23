@@ -17,6 +17,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QTime t;
     t= QTime::currentTime();
     qsrand(t.msec()+t.second()*1000);
+    int temp = qrand() % 4;
+    cout << temp << endl;
 
     //随机选择一个初始指令
     mem->nowAchieve = qrand() % 319;
