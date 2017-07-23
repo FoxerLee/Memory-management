@@ -1,5 +1,9 @@
 ## 操作系统小项目
 
+   [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://github.com/FoxerLee/iOS_sitp/blob/master/license)
+
+
+
 ### 项目说明
 
 请求调页存储管理方式模拟
